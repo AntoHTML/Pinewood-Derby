@@ -83,5 +83,6 @@ namespace Race
         public string Name { get; set; }
         public int Car { get; set; }
         public char Lane { get; set; }
+        public string Rank { get; set; }
     }
 }
