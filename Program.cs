@@ -27,7 +27,9 @@ namespace Race
                 Console.WriteLine("Enter participant's lane number");
                 var partlane1 = Console.ReadLine();
                 var partlane = char.Parse(partlane1);
-                var newparticipant = new Participant { Name = partname, Car = partcar, Lane = partlane};
+                Console.WriteLine("Enter the participant's rank");
+                var partrank = Console.ReadLine();
+                var newparticipant = new Participant { Name = partname, Car = partcar, Lane = partlane, Rank = partrank};
                 participants.Add(newparticipant);
                 Console.Clear();
                 participantscount++;
