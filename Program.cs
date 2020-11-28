@@ -7,9 +7,8 @@ namespace Race
     class Program
     {
         static long startTime = 0;
-        private static List<Participant> 
-        participants = new List<Participant>();
-        tigerList = new List<Participant>();
+        private static List<Participant> participants = new List<Participant>();
+        private static List<Participant> tigerList = new List<Participant>();
         static void Main(string[] args)
         {
             Console.Clear();
