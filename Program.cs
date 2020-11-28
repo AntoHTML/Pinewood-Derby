@@ -9,6 +9,7 @@ namespace Race
         static long startTime = 0;
         private static List<Participant> 
         participants = new List<Participant>();
+        tigerList = new List<Participant>();
         static void Main(string[] args)
         {
             Console.Clear();
@@ -31,6 +32,10 @@ namespace Race
                 var partrank = Console.ReadLine();
                 var newparticipant = new Participant { Name = partname, Car = partcar, Lane = partlane, Rank = partrank};
                 participants.Add(newparticipant);
+                if (newparticipant.Rank == "tiger")
+                {
+
+                }
                 Console.Clear();
                 participantscount++;
             } while (participantscount < numparticipants);
