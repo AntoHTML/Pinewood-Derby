@@ -9,6 +9,11 @@ namespace Race
         static long startTime = 0;
         private static List<Participant> participants = new List<Participant>();
         private static List<Participant> tigerList = new List<Participant>();
+        private static List<Participant> wolfList = new List<Participant>();
+        private static List<Participant> bearList = new List<Participant>();
+        private static List<Participant> webelosList = new List<Participant>();
+        private static List<Participant> troopList = new List<Participant>();
+        private static List<Participant> siblingList = new List<Participant>();
         static void Main(string[] args)
         {
             Console.Clear();
@@ -27,13 +32,33 @@ namespace Race
                 Console.WriteLine("Enter participant's lane number");
                 var partlane1 = Console.ReadLine();
                 var partlane = char.Parse(partlane1);
-                Console.WriteLine("Enter the participant's rank");
+                Console.WriteLine("Enter the participant's rank (put troop if in troop or sibling if a sibling)");
                 var partrank = Console.ReadLine();
                 var newparticipant = new Participant { Name = partname, Car = partcar, Lane = partlane, Rank = partrank};
                 participants.Add(newparticipant);
                 if (newparticipant.Rank == "tiger")
                 {
-
+                    tigerList.Add(newparticipant);
+                }
+                else if (newparticipant.Rank == "wolf")
+                {
+                    wolfList.Add(newparticipant);
+                }
+                else if (newparticipant.Rank == "bear")
+                {
+                    bearList.Add(newparticipant);
+                }
+                else if (newparticipant.Rank == "webelos")
+                {
+                    webelosList.Add(newparticipant);
+                }
+                else if (newparticipant.Rank == "troop")
+                {
+                    troopList.Add(newparticipant);
+                }
+                else if (newparticipant.Rank == "sibling")
+                {
+                    siblingList.Add(newparticipant);
                 }
                 Console.Clear();
                 participantscount++;
